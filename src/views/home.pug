@@ -8,7 +8,20 @@ html(lang="en")
         link(rel="stylesheet", href="https://unpkg.com/mvp.css@1.10.2/mvp.css")
     body 
         header 
-            h1 Hello 
+            h1 Hoot
         main 
-            h2 Welcome to Meowchat
+            div#welcome
+                form(action="")
+                    input(placeholder="Room Name" type="text" required)
+                    button Enter Room 
+            div#room
+                h3
+                ul
+                form#name
+                    input( placeholder="nickname" required type="text")
+                    button Update
+                form#msg
+                    input( placeholder="message" required type="text")
+                    button Send
+        script(src="/socket.io/socket.io.js") 
         script(src="/public/js/app.js") 
